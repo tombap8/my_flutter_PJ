@@ -7,6 +7,9 @@ void main(List<String> args) {
 
   ffd(33333);
   ffd('혼자난리야~~!');
+
+  print('구구단 9단은?');
+  gugu(9);
 }
 
 Function ff = (int a) => a * 1000;
@@ -21,4 +24,10 @@ void ffc(Function f) {
 
 void ffd(var cc) {
   print(cc);
+}
+
+void gugu(int aa) {
+  for (var i = 1; i <= 9; i++) {
+    print('$aa × $i = ${aa * i}');
+  }
 }

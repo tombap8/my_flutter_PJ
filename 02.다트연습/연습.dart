@@ -42,9 +42,12 @@ int ff (int aa){
   return aa + 4;
 }
 
-int minus(){
-  return --bbb;
-}
+// int minus(){
+//   return --bbb;
+// }
+
+// 람다식
+Function minus = () => --bbb;
 
 void mmm(){
   ++bbb;

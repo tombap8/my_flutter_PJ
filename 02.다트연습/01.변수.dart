@@ -67,7 +67,7 @@ void main(List<String> args) {
 
   // Set<int> evens = {2,4,6,8,10,4};
   // Set<dynamic> evens = {2,4,6,8,10,4,'짝수'};
-  var evens = {2,4,6,8,10,4,'짝수'};
+  var evens = {2,4,6,8,10};
   print(evens);
   // 리스트형으로 변환
   print(evens.toList());
@@ -98,7 +98,7 @@ void main(List<String> args) {
   print("111 + 777 = $result");
 
   String movie(num snum){
-    var temp = free
+    var temp = snum.toString()+"gg";
     return temp;
   }
 
@@ -107,7 +107,7 @@ void main(List<String> args) {
 
   print("이순신 최후의 전투는 ${free[2]}해전이다!");
 
-  print('이순신 영화 3가지는 ${} 이다!');
+  // print('이순신 영화 3가지는 ${} 이다!');
 
 
 }

@@ -16,11 +16,17 @@ void main(List<String> args) {
   Dog d2 = Dog();
   print("이름은 ${d2.name}");
 
-  Cat c1 = Cat('이집트고양이', 9, '밝은회색', 77);
+  Cat c1 = Cat('이집트고양이', 9, '밝은회색', 77,'고양이','내성적','생선');
   print('고양이 이름은 ${c1.name}');
   print('내 애완 동물은 ${c1.species}');
   print('${c1.species}의 울음소리는 ${c1.hearSound(c1.species)}');
   print('내 고양이 ${c1.name}의 성격은 ${c1.character}입니다!');
+
+  const aa = "aa";
+  final bb;
+  bb="bb";
+
+  print('$aa $bb');
 } //////////// main ////////////
 
 /************************************* 
@@ -42,11 +48,12 @@ class MyClassIsPerfect{
 // 애완동물 클래스
 class Pet {
   // 애완종류
-  String species;
+  final String species;
   // 성격
-  String character;
+  final String character;
   // 먹이종류
-  String food;
+  final String food;
+  final int myNum=100;
 
   Pet(this.species, this.character, this.food) {
     print('부모 Pet 클래스 생성자!');
@@ -99,8 +106,11 @@ class Cat extends Pet {
   // 고양이펀치지수(0~100%)
   int punch;
 
-  Cat(this.name, this.age, this.color, this.punch) : super('고양이', '내성적', '생선') {
+// 이니셜라이저 키워드 -> :
+  // Cat(this.name, this.age, this.color, this.punch) : super('고양이', '내성적', '생선') {
+  Cat(this.name, this.age, this.color, this.punch, String species, String character,String food) : super(species,character,food) {
     print('Cat 생성자함수');
+    print(super.myNum);
   }
 
   // 클래스 메서드

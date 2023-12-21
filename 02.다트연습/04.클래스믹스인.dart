@@ -17,6 +17,13 @@ void main(List<String> args) {
   print(h.k_engine.power);
 }
 
+/********************************************************** 
+  [다트 Mixin]
+  1. 다중 상속이 필요할 때 Mixin을 사용함
+  2. Mixin은 다른 코드에 더해질 목적으로 만들어진 클래스임.
+  3. with 키워드는 클래스에 Mixin 클래스를 사용할때 씀.
+ **********************************************************/
+
 // 믹스인만 사용한 경우 인스턴스화 불가!
 mixin Engine {
   int power = 5000;
@@ -34,6 +41,7 @@ class Tesla with Engine, Wheel, Light {
   final String compName;
   final String model;
   final double price;
+  double distance = 480.0;
   Tesla(this.compName, this.model, this.price);
 }
 
@@ -41,6 +49,7 @@ class Tesla with Engine, Wheel, Light {
 
 class K_Engine {
   int power = 8000;
+  double distance = 500.0;
 }
 
 class HyunDai {

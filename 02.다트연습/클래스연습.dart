@@ -54,8 +54,9 @@ class KyungSu implements Saram {
   @override
   String age() => '$name씨의 나이는 20살이다!';
 
-  @override
-  String eat() => '$name씨는 피자를 먹는다!';
+  @override  
+  String eat(){return '$name씨는 피자를 먹는다!';}
+  // String eat() => '$name씨는 피자를 먹는다!';
 
   @override
   String say() => '$name씨는 무엇인가 말하고 있다!';
@@ -116,7 +117,7 @@ class JunHo extends Namja with Hobby, Singer {
 
 void testClasses() {
   KyungSu ks = KyungSu();
-  ks.name = '도경수';
+  ks.name='도경수';
   print(ks.eat());
   print(ks.say());
   // print(KyungSu().eat());

@@ -69,9 +69,19 @@ class StorePage extends StatelessWidget {
             ]),
           ),
           // 이미지 추가하기
-          Image.asset(
-            "assets/bag.jpeg",
-            fit: BoxFit.cover,
+          // Expanded 위젯 - flex속성이 있어서 등분할하여 균등하게 보이게함
+          Expanded(
+            child: Image.asset(
+              "assets/bag.jpeg",
+              fit: BoxFit.cover,
+            ),
+          ),
+          SizedBox(height: 5.0,), // 이미지 사이공백줌
+          Expanded(
+            child: Image.asset(
+              "assets/cloth.jpeg",
+              fit: BoxFit.cover,
+            ),
           ),
         ],
       ),

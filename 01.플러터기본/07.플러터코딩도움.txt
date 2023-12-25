@@ -2,6 +2,10 @@
 
 1. 에러는 아닌데 왜 파란색 밑줄이 가나요?
 -> 이유: 하드코딩부분을 const로 표현하라는 코딩보안상 권고사항임!
+const 생성자를 사용하여 생성하면 성능이 향상되고 
+메모리 사용량을 줄일 수 있으나,
+빠른 개발이 필요한 단계에서는 생산성을 중요시하기 때문에 
+편의상 해당 제안을 비활성화하는 경우도 있음
 
     해결방법 ) 
     명령팔레트(ctrl+shift+p)에서 Open User Settings(JSON)
@@ -22,9 +26,10 @@
     rules: 바로 밑에 아래에 코드 2줄 추가
     ++++++++++++++++++++++++++++++++++++++++++++++++++
     prefer_const_constructors: false
-    prefer_const_literals_to_create_immutables: false
+    prefer_const_literals_to_create_immutables: false
+    prefer_const_constructors_in_immutables: false
     ++++++++++++++++++++++++++++++++++++++++++++++++++
-    컨트롤+S (저장)
+    컨트롤+S (저장) 후 VSCode 툴을 내렸다가 다시 띄워야함!
 
 2. 자동 정렬하고 싶은데 단축키는?
 -> 기본적인 자동 코드정렬 기능이 있다!

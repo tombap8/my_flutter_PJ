@@ -26,8 +26,8 @@ class StorePage extends StatelessWidget {
         body: SafeArea(
       child: Column(
         children: [
-          // Padding 위젯
-          /*             
+          /*
+            [ Padding 위젯 ]
             padding: EdgeInsets.all(4방향전체),
             padding: EdgeInsets.only(left/top/right/bottom특정방향만),
             padding: EdgeInsets.symmetric(수직/수평중),

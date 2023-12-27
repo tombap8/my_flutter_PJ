@@ -78,6 +78,9 @@ flutter:
     - family: PatuaOne
       fonts:
         - asset: assets/fonts/PatuaOne-Regular.ttf
+    - family: Diphylleia
+      fonts:
+        - asset: assets/fonts/Diphylleia-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

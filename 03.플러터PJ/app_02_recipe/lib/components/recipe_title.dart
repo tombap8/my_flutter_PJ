@@ -7,9 +7,11 @@ class RecipeTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 20),
-      child: Text(
-        "Recipes",
-        style: TextStyle(fontSize: 30),
+      child: Center(
+        child: Text(
+          "황금 레시피",
+          style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }

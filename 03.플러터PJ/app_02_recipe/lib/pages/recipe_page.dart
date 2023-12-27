@@ -14,13 +14,14 @@ class RecipePage extends StatelessWidget {
       appBar: _buildRecipeAppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
+        // padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 100),
         child: ListView(
           children: [
             RecipeTitle(),
-            RecipeMenu(),
-            RecipeListItem("coffee", "Made Coffee"),
-            RecipeListItem("burger", "Made Burger"),
-            RecipeListItem("pizza", "Made Pizza"),
+            RecipeMenu(), 
+            RecipeListItem("coffee", "커피 레시피"),
+            RecipeListItem("burger", "햄버거 레시피"),
+            RecipeListItem("pizza", "피자 레시피"),
           ],
         ),
       ),

@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: "PatuaOne"),
+      theme: ThemeData(fontFamilyFallback: ["PatuaOne","Diphylleia"]),
       home: RecipePage(),
     );
   }

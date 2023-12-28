@@ -13,6 +13,7 @@ class RecipePage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: _buildRecipeAppBar(),
       body: Padding(
+        // 상하/좌우 대칭 여백패딩 설정(symmetric:대칭적인)
         padding: const EdgeInsets.symmetric(horizontal: 20),
         // padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 100),
         child: ListView(

@@ -23,7 +23,7 @@ class _ProfileTabState extends State<ProfileTab> with SingleTickerProviderStateM
   @override
   void initState() {
     super.initState();
-    _tabController = new TabController(length: 2, vsync: this);
+    _tabController = TabController(length: 2, vsync: this);
   }
 
   Widget _buildTabBar() {
@@ -32,11 +32,11 @@ class _ProfileTabState extends State<ProfileTab> with SingleTickerProviderStateM
       tabs: [
         Tab(
             icon: Icon(
-              Icons.directions_car,
+              Icons.photo_camera,
             )),
         Tab(
             icon: Icon(
-              Icons.directions_transit,
+              Icons.photo,
             )),
       ],
     );
@@ -58,7 +58,19 @@ class _ProfileTabState extends State<ProfileTab> with SingleTickerProviderStateM
                 "https://picsum.photos/id/${index + 1}/200/200");
           },
         ),
-        Container(color: Colors.red),
+        GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisSpacing: 10,
+            crossAxisCount: 3,
+            mainAxisSpacing: 10,
+          ),
+          itemCount: 42,
+          itemBuilder: (context, index) {
+            return Image.network(
+                "https://picsum.photos/id/${index + 43}/200/200");
+          },
+        ),
+        // Container(color: Colors.red),
       ],
     );
   }

@@ -11,17 +11,26 @@ class ProfileDrawer extends StatelessWidget {
       color: Colors.blue,
       child: Column(
         children: [
-          SizedBox(height: 20,),
+          SizedBox(
+            height: 20,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.home,color: Colors.white,),
-              SizedBox(width: 5,),
-          Text(
-            "Home",
-            style: TextStyle(fontSize: 20, color: Colors.white),
-          ),
-
+              Icon(
+                Icons.home,
+                color: Colors.white,
+              ),
+              SizedBox(
+                width: 5,
+              ),
+              Text(
+                "Home",
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                ),
+              ),
             ],
           ),
         ],

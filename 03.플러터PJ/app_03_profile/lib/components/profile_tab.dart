@@ -7,7 +7,8 @@ class ProfileTab extends StatefulWidget {
   State<ProfileTab> createState() => _ProfileTabState();
 }
 
-class _ProfileTabState extends State<ProfileTab> with SingleTickerProviderStateMixin {
+class _ProfileTabState extends State<ProfileTab>
+    with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -32,12 +33,12 @@ class _ProfileTabState extends State<ProfileTab> with SingleTickerProviderStateM
       tabs: [
         Tab(
             icon: Icon(
-              Icons.photo_camera,
-            )),
+          Icons.photo_camera,
+        )),
         Tab(
             icon: Icon(
-              Icons.photo,
-            )),
+          Icons.photo,
+        )),
       ],
     );
   }
@@ -54,6 +55,7 @@ class _ProfileTabState extends State<ProfileTab> with SingleTickerProviderStateM
           ),
           itemCount: 42,
           itemBuilder: (context, index) {
+            // debugPrint('순번:$index/컨텍스트:$context');
             return Image.network(
                 "https://picsum.photos/id/${index + 1}/200/200");
           },

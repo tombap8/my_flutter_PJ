@@ -10,7 +10,8 @@ class CustomForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Form(
-      // 2. 글로벌 key를 Form 태그에 연결하여 해당 key로 Form의 상태를 관리할 수 있다.
+      // 2. 글로벌 key를 Form 태그에 연결하여 해당 key로 
+      // Form의 상태를 관리할 수 있다.
       key: _formKey,
       child: Column(
         children: [

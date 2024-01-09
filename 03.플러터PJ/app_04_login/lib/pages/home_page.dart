@@ -12,11 +12,12 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 200),
-            Logo("Care Soft"),
+            Logo("Dart Soft"),
             SizedBox(height: 50),
             TextButton(
               onPressed: () {
-                Navigator.pop(context); // 1. 화면 스택 제거
+                // Navigator.pop(context); // 1. 화면 스택 제거
+                Navigator.pushNamed(context, "/login");
               },
               child: Text("Get Started"),
             ),

@@ -12,8 +12,8 @@ class Logo extends StatelessWidget {
       children: [
         SvgPicture.asset(
           "assets/logo.svg",
-          height: 70,
-          width: 70,
+          // height: 70,
+          width: 300,
         ),
         Text(
           title,

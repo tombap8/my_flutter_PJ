@@ -30,14 +30,26 @@ class CustomTextFormField extends StatelessWidget {
             focusedBorder: OutlineInputBorder(
               // 4. 손가락 터치시 TextFormField 디자인
               borderRadius: BorderRadius.circular(20),
+              borderSide: BorderSide(
+                color: Colors.blue,
+                width: 3,
+                )
             ),
             errorBorder: OutlineInputBorder(
               // 5. 에러발생시 TextFormField 디자인
               borderRadius: BorderRadius.circular(20),
+              borderSide: BorderSide(
+                color: Colors.red,
+                width: 5,
+                )
             ),
             focusedErrorBorder: OutlineInputBorder(
               // 5. 에러가 발생 후 손가락을 터치했을 때 TextFormField 디자인
               borderRadius: BorderRadius.circular(20),
+              borderSide: BorderSide(
+                color: Colors.purple,
+                width: 10,
+                )
             ),
           ),
         ),

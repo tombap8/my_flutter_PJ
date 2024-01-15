@@ -30,7 +30,7 @@ class ShoppingCartPage extends StatelessWidget {
       body: Column(
         children: [
           ShoppingCartHeader(),
-          Expanded(child: ShoppingCartDetail()),
+          // Expanded(child: ShoppingCartDetail()),
         ],
       ),
     );

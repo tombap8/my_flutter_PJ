@@ -34,6 +34,13 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
     "Tesla Model3": [7800, 98],
     "Cessna 150": [12400, 75],
   };
+  // 상품색상 리스트
+  Map<String, List> goodsColor = {
+    "Living bicycle": [Colors.red, Colors.blue],
+    "Honda motorcycle": [Colors.red, Colors.blue, Colors.pink],
+    "Tesla Model3": [Colors.red, Colors.blue, Colors.black],
+    "Cessna 150": [Colors.red, Colors.yellow, Colors.purple],
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -42,18 +49,7 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
         _buildHeaderPic(),
         _buildHeaderSelector(),
         // 하단 디테일 정보
-        Padding(
-          padding: const EdgeInsets.all(30.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildDetailNameAndPrice(),
-              _buildDetailRatingAndReviewCount(),
-              _buildDetailColorOptions(),
-              _buildDetailButton(context),
-            ],
-          ),
-        )
+        _buildCartInfo(),
       ],
     );
   }
@@ -109,6 +105,25 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
 //////////////////////////////////////////
   ///
   ///
+  ///
+  ///
+  ///
+
+  Widget _buildCartInfo() {
+    return Padding(
+      padding: const EdgeInsets.all(30.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _buildDetailNameAndPrice(),
+          _buildDetailRatingAndReviewCount(),
+          _buildDetailColorOptions(),
+          _buildDetailButton(context),
+        ],
+      ),
+    );
+  }
+
   Widget _buildDetailNameAndPrice() {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
@@ -166,6 +181,8 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
   }
 
   Widget _buildDetailColorOptions() {
+    dynamic my = goodsColor[selectedTit[selectedId]];
+
     return Padding(
       padding: const EdgeInsets.only(bottom: 20),
       child: Column(
@@ -175,12 +192,13 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
           SizedBox(height: 10),
           Row(
             children: [
+              for (int i = 0; i < my.length;i++)
+              _buildDetailIcon(my[i]),
               // 3. 동일한 색상 아이콘을 재사용하기 위해 함수로 관리
-              _buildDetailIcon(Colors.black),
-              _buildDetailIcon(Colors.green),
-              _buildDetailIcon(Colors.orange),
-              _buildDetailIcon(Colors.grey),
-              _buildDetailIcon(Colors.white),
+              // _buildDetailIcon(Colors.green),
+              // _buildDetailIcon(Colors.orange),
+              // _buildDetailIcon(Colors.grey),
+              // _buildDetailIcon(Colors.white),
             ],
           ),
         ],

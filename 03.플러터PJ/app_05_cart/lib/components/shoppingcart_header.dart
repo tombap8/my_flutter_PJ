@@ -149,11 +149,12 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
       child: Row(
         children: [
           // ss.reduce((v) => v),
-          Icon(Icons.star, color: Colors.pink),
-          Icon(Icons.star, color: Colors.pink),
-          Icon(Icons.star, color: Colors.pink),
-          Icon(Icons.star, color: Colors.pink),
-          Icon(Icons.star, color: Colors.pink),
+          for (int i = 0; i < selectedId + 3; i++)
+            Icon(Icons.star, color: Colors.pink),
+          // Icon(Icons.star, color: Colors.pink),
+          // Icon(Icons.star, color: Colors.pink),
+          // Icon(Icons.star, color: Colors.pink),
+          // Icon(Icons.star, color: Colors.pink),
           // 2. Spacer()로 Icon위젯과 Text위젯을 양끝으로 벌릴 수 있다. spaceBetween과 동일
           Spacer(),
           Text("review "),
